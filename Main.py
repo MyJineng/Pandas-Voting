@@ -60,7 +60,7 @@ if max(votes) == charles_votes:
     print('Election Winner is Charles Casper Stockham!')
 elif max(votes) == diana_votes:
     print('Election Winner is Diana DeGette!')
-elif max(votes) == diana_votes:
+elif max(votes) == rayman_votes:
     print('Election Winner is Raymon Anthony Doane!')
 # Create Txt with data
 PyPoll = open("Stats/PyPoll.txt", "w")
