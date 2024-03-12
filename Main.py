@@ -18,11 +18,11 @@ avg_chg_bal = round(df['avg_chg_bal'].mean(), 2)
 # Find max and reformat using mean Pandas mean and Py int function
 max_total = int(df['avg_chg_bal'].max())
 # Use loc function to find value that matches the greatest balance increase
-max_month = df.loc[df['avg_chg_bal'] == 1862002, :]
+max_month = df.loc[df['avg_chg_bal'] == max_total, :]
 # Find min and reformat using min Pandas mean and Py int function
 min_total = int(df['avg_chg_bal'].min())
 # Use loc function to find value that matches the greatest balance decrease
-min_month = df.loc[df['avg_chg_bal'] == -1825558, :]
+min_month = df.loc[df['avg_chg_bal'] == min_total, :]
 print(
     f'Financial Analysis:\n{total_months} Months in Total\nBalance of ${total_balance}\nAverage Balance of ${avg_chg_bal}\n'
     f'Largest Increase was ${max_total} in {max_month["Date"].values[0]}\nLargest Decrease was ${min_total} in {min_month["Date"].values[0]}\n')
